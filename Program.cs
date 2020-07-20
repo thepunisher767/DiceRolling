@@ -28,7 +28,8 @@ namespace DiceRolling
                     continueFlag = false;
                 }
                 rollCount++;;
-            } 
+            }
+            Console.WriteLine($"\n\nThanks for playing!!!!!!!!!!!!!!!!! AHHHHHHHHHHHHHHHHH!!!!!!!!!!!!");
         }
 
         public static void CheckCombo(int dieSides, int[] rolls)
