@@ -61,18 +61,18 @@ namespace DiceRolling
             }
         }
 
-        public static int[] RollDice(int dieSides, int[] rolls)
+        public static int[] RollDice(int dieSides, int[] rolls) //Generate random rolls
         {
             Random number = new Random();
-            rolls.SetValue(number.Next(1, dieSides), 0);
-            rolls.SetValue(number.Next(1, dieSides), 1);
+            rolls.SetValue(number.Next(1, dieSides + 1), 0);
+            rolls.SetValue(number.Next(1, dieSides + 1), 1);
             return rolls;
         }
 
-        public static int IntValidation(string input) // shop selection validation
+        public static int IntValidation(string input)   //Check for valid input
         {
             int validIntOutput;
-            while (!int.TryParse(input, out validIntOutput)) //manually set range
+            while (!int.TryParse(input, out validIntOutput))
             {
                 Console.Write($"Please a valid integer: ");
                 input = Console.ReadLine();
